@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "6e0b6763-9941-4e15-9269-ef57bf7a3342",
+		"name": "Customer API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"login\" : \"ababa\",\n    \"email\" : \"email@test.com\",\n    \"firstName\" : \"first\",\n    \"surname\" : \"surname\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/customers",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Customer by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/customers/:customerId",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						":customerId"
+					],
+					"variable": [
+						{
+							"key": "customerId",
+							"value": "2919aac5-264d-4958-9190-21047929e200"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Customer Transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\" : 110\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/customers/:customerId/transactions",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						":customerId",
+						"transactions"
+					],
+					"variable": [
+						{
+							"key": "customerId",
+							"value": "2919aac5-264d-4958-9190-21047929e200"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Customer Transaction",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\" : 50\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/customers/:customerId/transactions/:transactionId",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						":customerId",
+						"transactions",
+						":transactionId"
+					],
+					"variable": [
+						{
+							"key": "customerId",
+							"value": "2919aac5-264d-4958-9190-21047929e200"
+						},
+						{
+							"key": "transactionId",
+							"value": "cd49b534-d214-40b7-9645-4eb8fb374351"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Customer Rewards",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/customers/:customerId/rewards",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						":customerId",
+						"rewards"
+					],
+					"variable": [
+						{
+							"key": "customerId",
+							"value": "2919aac5-264d-4958-9190-21047929e200"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Customer Transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/customers/:customerId/transactions",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						":customerId",
+						"transactions"
+					],
+					"variable": [
+						{
+							"key": "customerId",
+							"value": "2919aac5-264d-4958-9190-21047929e200"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
